@@ -1,0 +1,4 @@
+# enhanced hosts file, hot load enabled
+
+# like /etc/hosts but add CNAME support
+108.181.199.78                  devrahman.com

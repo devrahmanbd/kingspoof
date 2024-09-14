@@ -1,0 +1,31 @@
+# Bind address for DNS queries (default 0.0.0.0)
+# bind: 0.0.0.0
+
+# Port on which KungFu will listen for DNS queries
+dns_port: 53
+
+# Upstream DNS servers to forward queries to
+dns_upstream:
+  - 1.2.4.8
+  - 114.114.114.114
+
+# Hijack address pool for DNS hijacking
+network: 10.89.0.1/16
+
+# Proxy configuration (if needed)
+proxy:
+  - name: hk
+    values:
+      - socks5://72.195.34.58:4145
+
+  - name: jp
+    values:
+      - socks5://192.111.129.145:16894
+
+# Prometheus metrics configuration (optional)
+metrics: 0.0.0.0:6080
+
+# DNS hijacking rules
+rules:
+  - domain: "devrahman.com"
+    response: "108.181.199.78"
